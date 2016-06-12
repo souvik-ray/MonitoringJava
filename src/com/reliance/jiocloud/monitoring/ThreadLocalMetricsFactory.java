@@ -19,7 +19,7 @@ public class ThreadLocalMetricsFactory extends AbstractMetricsFactory {
     }
 
     @Override
-    public Metrics createMetrics() throws UnknownHostException {
+    public Metrics createMetrics() {
         Metrics metrics = new ThreadLocalMetrics();
         this.addMetricAttributes(metrics);
         return metrics;

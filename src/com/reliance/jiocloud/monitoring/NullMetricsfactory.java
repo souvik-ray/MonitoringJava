@@ -1,5 +1,4 @@
 package com.reliance.jiocloud.monitoring;
-import java.net.UnknownHostException;
 
 public class NullMetricsfactory extends AbstractMetricsFactory {
 
@@ -16,8 +15,7 @@ public class NullMetricsfactory extends AbstractMetricsFactory {
     }
 
     @Override
-    public Metrics createMetrics() throws UnknownHostException {
-        // TODO Auto-generated method stub
+    public Metrics createMetrics() {
         Metrics metrics = new NullMetrics(this.displayMetricToConsole);
         this.addMetricAttributes(metrics);
         return metrics;

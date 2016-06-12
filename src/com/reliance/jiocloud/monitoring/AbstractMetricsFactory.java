@@ -42,10 +42,12 @@ public abstract class AbstractMetricsFactory implements MetricsFactory {
         return this;
     }
 
-    public void addMetricAttributes(Metrics metrics) throws UnknownHostException {
-        metrics.addProperty("HostName", InetAddress.getLocalHost().getHostName());
-        // metrics.addProperty("PId", os.getId());
-
+    public void addMetricAttributes(Metrics metrics) {
+        try {
+        	metrics.addProperty("HostName", InetAddress.getLocalHost().getHostName());
+        } catch (Exception e) {
+        	// Do nothing.
+        }
         if (this.programName != null) {
             metrics.addProperty("ProgramName", this.programName);
         }
