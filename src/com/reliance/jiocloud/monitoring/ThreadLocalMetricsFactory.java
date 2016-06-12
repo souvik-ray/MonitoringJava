@@ -1,3 +1,4 @@
+package com.reliance.jiocloud.monitoring;
 import java.net.UnknownHostException;
 
 import org.slf4j.*;
@@ -23,15 +24,4 @@ public class ThreadLocalMetricsFactory extends AbstractMetricsFactory {
         this.addMetricAttributes(metrics);
         return metrics;
     }
-
-    // public Logger createTimedRotatingLog(String path, boolean
-    // propogateToApplicationLogs){
-    // logger = Logger.getLogger("service.log");
-    // logger.propagate = propogateToApplicationLogs;
-    //
-    // Handler handler = Logger.handlers.WatchedFileHandler(path);
-
-    // logger.addHandler(handler);
-    // return logger;
-    // }
 }

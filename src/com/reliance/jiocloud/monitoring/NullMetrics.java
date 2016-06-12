@@ -1,3 +1,4 @@
+package com.reliance.jiocloud.monitoring;
 public class NullMetrics extends AbstractMetrics {
 
     boolean displayMetricToConsole;
@@ -14,10 +15,8 @@ public class NullMetrics extends AbstractMetrics {
 
     @Override
     public void flushMetrics() {
-        // TODO Auto-generated method stub
-        if (this.displayMetricToConsole) {
-            System.out.println(this.toString());
-        }
+        System.out.println(this.toString());
+        
     }
 
 }
